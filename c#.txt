@@ -1,0 +1,67 @@
+using System;
+namespace arithmetic
+{
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		float num1,num2,result;
+		Console.WriteLine("enter the 1st number");
+		num1 = float.Parse(Console.ReadLine());
+		
+		Console.WriteLine("enter the 2nd number");
+		num2 = float.Parse(Console.ReadLine());
+		
+		//Console.WriteLine("num1 =" +num1);
+		//Console.WriteLine("num1 =" +num2);
+		
+		result= num1+num2;
+		Console.WriteLine("result is"+result);
+		
+		result=num1*num2;
+		Console.WriteLine("result is "+result);
+		
+		result= num1 / num2;
+		Console.WriteLine("result is"+result);
+		
+		result=num1-num2;
+		Console.WriteLine("result is "+result);
+	}
+  }
+}
+
+//cgpa calculator
+using System;
+namespace CgpaCalculator
+{
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		float Ca1_Marks,EteMarks,MteMarks,Ca2_Marks,TotalCaMarks,TotalPercentage,Cgpa;
+		string subject;
+		int Cawtg=20,Mtewtg=25,attendence=5,Etewtg=50;
+		
+		Console.WriteLine("enter the subject name");
+		subject=Console.ReadLine();
+		
+		Console.WriteLine("enter the marks of 1st ca");
+		Ca1_Marks = float.Parse(Console.ReadLine());
+		
+		Console.WriteLine("enter the marks of 2st ca");
+		Ca2_Marks = float.Parse(Console.ReadLine());
+		
+		Console.WriteLine("enter the marks of mte");
+		MteMarks = float.Parse(Console.ReadLine());
+		
+		Console.WriteLine("enter the marks of ete");
+		EteMarks = float.Parse(Console.ReadLine());
+		
+		TotalCaMarks = Ca1_Marks+Ca2_Marks;
+		TotalPercentage = ((TotalCaMarks*Cawtg)/60+(MteMarks*Mtewtg)/40+(EteMarks*Etewtg)/70)+attendence;
+		//Console.WriteLine(TotalPercentage);
+		Cgpa=TotalPercentage / 10;
+		Console.WriteLine("your current cgpa is "+Cgpa);
+	}
+  }
+}
